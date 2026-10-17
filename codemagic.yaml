@@ -31,7 +31,6 @@ workflows:
       - name: Flutter build ipa
         script: |
           flutter build ipa --release \
-            --build-number=$(($(app-store-connect get-latest-testflight-build-number "$BUNDLE_ID") + 1)) \
             --export-options-plist=$HOME/export_options.plist
     artifacts:
       - build/ios/ipa/*.ipa
