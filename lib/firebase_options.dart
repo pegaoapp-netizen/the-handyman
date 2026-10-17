@@ -67,7 +67,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '39725091199',
     projectId: 'the-handyman-dfeae',
     storageBucket: 'the-handyman-dfeae.firebasestorage.app',
-    iosBundleId: 'com.example.mtgPro',
+    iosBundleId: 'com.walkcheck.mtgpro',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
@@ -76,6 +76,6 @@ class DefaultFirebaseOptions {
     messagingSenderId: '39725091199',
     projectId: 'the-handyman-dfeae',
     storageBucket: 'the-handyman-dfeae.firebasestorage.app',
-    iosBundleId: 'com.example.mtgPro',
+    iosBundleId: 'com.walkcheck.mtgpro',
   );
 }
