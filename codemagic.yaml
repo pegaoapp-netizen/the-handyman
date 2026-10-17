@@ -3,11 +3,11 @@ workflows:
     name: iOS TestFlight
     instance_type: mac_mini_m2
     max_build_duration: 60
+    integrations:
+      app_store_connect: codemagic
     environment:
       vars:
         BUNDLE_ID: com.walkcheck.mtgpro
-        APP_STORE_CONNECT_ISSUER_ID: 44f87fd6-b2d8-4f88-bdcd-9f42f95fbd61
-        APP_STORE_CONNECT_KEY_IDENTIFIER: C92RRA3NYQ
       flutter: stable
       xcode: latest
       cocoapods: default
@@ -23,9 +23,12 @@ workflows:
         script: keychain add-certificates
       - name: Set up code signing
         script: xcode-project use-profiles
+      - name: Get packages
+        script: flutter pub get
       - name: Flutter build ipa
         script: |
           flutter build ipa --release \
+            --build-number=$(($(app-store-connect get-latest-testflight-build-number "$BUNDLE_ID") + 1)) \
             --export-options-plist=$HOME/export_options.plist
     artifacts:
       - build/ios/ipa/*.ipa
