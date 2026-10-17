@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "39725091199",
+    "project_id": "the-handyman-dfeae",
+    "storage_bucket": "the-handyman-dfeae.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:39725091199:android:7b916a377c0df960d2724a",
+        "android_client_info": {
+          "package_name": "com.example.mtg_pro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnP23jShoghzp4KLFJtixuocr9d2s0ES0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
